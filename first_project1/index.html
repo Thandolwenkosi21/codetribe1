@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header>
     <nav class="navbar">
         <div class="logo">
-            <img src="assets/images/logo.png" alt="Logo" width="80">
+            <img src="assets/images/logo.png" alt="Logo" width="80" />
         </div>
-        <ul class="nav-links">
+
+
+        <button class="hamburger" id="hamburger">&#9776;</button>
+
+        <!-- Navigation  -->
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -24,7 +29,7 @@
 <main>
     <section class="hero">
         <div class="hero-placeholder">
-            <img src="assets/images/kittens.png" alt="Cute kittens" width="100%">
+            <img src="assets/images/kittens.png" alt="Cute kittens" width="100%" />
         </div>
     </section>
 
@@ -32,10 +37,10 @@
         <div class="bio-container">
             <div class="bio-text">
                 <h1>Thandolwenkosi</h1>
-                <p><strong>Your bio</strong> - I'm a tech-curious software engineer with a passion for exploring the ever-evolving world of technology. I am always on the lookout for innovative solutions and ways to push the boundaries of what's possible in tech.</p>
+                <p><strong>Bio</strong> - I'm a tech-curious software engineer with a passion for exploring the ever-evolving world of technology. I am always on the lookout for innovative solutions and ways to push the boundaries of what's possible in tech.</p>
             </div>
             <div class="bio-image">
-                <img src="assets/images/Potrait.jpeg" alt="My Portrait">
+                <img src="assets/images/Potrait.jpeg" alt="My Portrait" />
             </div>
         </div>
     </section>
@@ -51,6 +56,16 @@
         </ul>
     </div>
 </footer>
+
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>

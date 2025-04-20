@@ -1,0 +1,158 @@
+:root {
+  --primary-color: #1e90ff;
+  --secondary-color: #f4f4f4;
+  --text-color: #333;
+  --accent-color: #ffcc00;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*  Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bio Section */
+.bio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.bio-text {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.bio-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.bio-image {
+  flex: 1;
+  max-width: 300px;
+  padding-left: 1rem;
+}
+
+.bio-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Response Design */
+@media (max-width: 768px) {
+  .bio-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-text, .bio-image {
+    padding: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .footer-content {
+    gap: 1rem;
+  }
+}
+
+/* Scroll */
+html {
+  scroll-behavior: smooth;
+}
